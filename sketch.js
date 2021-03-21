@@ -1,9 +1,24 @@
 var ball;
 
+var position;
+var database;
+
+
 function setup(){
+
+    database=firebase.database();
     createCanvas(500,500);
     ball = createSprite(250,250,10,10);
     ball.shapeColor = "red";
+
+    var ball1 = database.ref("ball/position");
+    ball1.on("value",readPosition);
+}
+
+function readPosition(data){
+position=data.val();
+ball.x=position.x
+ball.y=position.y
 }
 
 function draw(){
@@ -24,6 +39,8 @@ function draw(){
 }
 
 function changePosition(x,y){
-    ball.x = ball.x + x;
-    ball.y = ball.y + y;
+    database.ref("ball/position").update({
+    x : position.x + x,
+    y : position.y + y
+})
 }

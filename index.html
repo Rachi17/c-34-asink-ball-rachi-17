@@ -8,6 +8,28 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDL6dZvupA63g7F2joZ8iouqLz0ePMp-fo",
+    authDomain: "asink-ball.firebaseapp.com",
+    databaseURL: "https://asink-ball-default-rtdb.firebaseio.com",
+    projectId: "asink-ball",
+    storageBucket: "asink-ball.appspot.com",
+    messagingSenderId: "679974055355",
+    appId: "1:679974055355:web:c24526565ad4bad032a89e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
   </head>
   <body>
       <script src="sketch.js"></script>
